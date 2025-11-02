@@ -7123,18 +7123,16 @@ const ia = () => Vt(),
                     t = o.firstChild,
                     a = t.firstChild;
                 a.firstChild, $e(o, (() =>  ""), t);
-                return "function" == typeof r ? ve(r, t) : r = t, t.style.setProperty("font-weight", "bold"), $e(a, (() => e.footer?.company ?? "innovistai"), null), M((r => {
-                    var a = e.footer?.textColor ?? e.poweredByTextColor ?? Ua,
-                        l = e.badgeBackgroundColor ?? "#ffffff",
-                        i = e.footer?.companyLink ?? "https://flowiseai.com",
-                        n = e.footer?.textColor ?? e.poweredByTextColor ?? Ua;
-                    return a !== r._v$ && (null != (r._v$ = a) ? o.style.setProperty("color", a) : o.style.removeProperty("color")), l !== r._v$2 && (null != (r._v$2 = l) ? o.style.setProperty("background-color", l) : o.style.removeProperty("background-color")), i !== r._v$3 && xe(t, "href", r._v$3 = i), n !== r._v$4 && (null != (r._v$4 = n) ? t.style.setProperty("color", n) : t.style.removeProperty("color")), r
-                }), {
-                    _v$: void 0,
-                    _v$2: void 0,
-                    _v$3: void 0,
-                    _v$4: void 0
-                }), o
+                // return lnull
+                //     var a = e.footer?.textColor ?? e.poweredByTextColor ?? Ua,
+                //         l = e.badgeBackgroundColor ?? "#ffffff",
+                //         i = e.footer?.companyLink ?? "https://flowiseai.com",
+                //         n = e.footer?.textColor ?? e.poweredByTextColor ?? Ua;
+                // }), {
+                    // _v$: void 0,
+                    // _v$2: void 0,
+                    // _v$3: void 0,
+                    // _v$4: void 0
             }
         }), z(oe, {
             get when() {
@@ -49573,7 +49571,7 @@ const _m = ge('<div class="fixed inset-0 rounded-lg flex items-center justify-ce
                             return r.theme?.chatWindow?.errorMessage
                         },
                         get poweredByTextColor() {
-                            return r.theme?.chatWindow?.poweredByTextColor
+                            return null
                         },
                         get textInput() {
                             return r.theme?.chatWindow?.textInput
@@ -49726,7 +49724,7 @@ const _m = ge('<div class="fixed inset-0 rounded-lg flex items-center justify-ce
                         return e.theme?.chatWindow?.errorMessage
                     },
                     get poweredByTextColor() {
-                        return e.theme?.chatWindow?.poweredByTextColor
+                        return null
                     },
                     get textInput() {
                         return e.theme?.chatWindow?.textInput
