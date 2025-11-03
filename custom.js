@@ -47571,7 +47571,15 @@ const am = ge('<span class="flex items-center gap-2">Saving...'),
                     email: t(),
                     phone: l()
                 }
-            }), e.setIsLeadSaved(!0), e.setLeadEmail(t()))) : (a = o.error.flatten(), m(a.fieldErrors)), d(!1)
+            }), e.setIsLeadSaved(!0), e.setLeadEmail(t()), setTimeout(() => {
+                const name = r();
+                if (userName) {
+                    x([...c, {
+                        message: `Hi ${name}, how can I help you?`,
+                        type: "apiMessage"
+                    }]);
+                }
+            }, 500))): (a = o.error.flatten(), m(a.fieldErrors)), d(!1)
         };
         {
             const d = dm(),
