@@ -48290,7 +48290,7 @@ const _m = ge('<div class="fixed inset-0 rounded-lg flex items-center justify-ce
                         } catch (e) {}
                     })(r.chatflowid), S(r.chatflowConfig?.vars?.customerId ? (r.chatflowConfig?.vars).customerId.toString() + "+" + ze() : ze()), Ge([]);
                     var e = [{
-                        message: r.welcomeMessage ?? qm,
+                        message: r.lead && T.lead.name ? 'Hi ${t.lead.name}, how can i help you?':(r.welcomeMessage ?? qm),
                         type: "apiMessage"
                     }];
                     N()?.status && !ke(r.chatflowid)?.lead && e.push({
