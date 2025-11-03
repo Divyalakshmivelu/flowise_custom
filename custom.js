@@ -48289,10 +48289,19 @@ const _m = ge('<div class="fixed inset-0 rounded-lg flex items-center justify-ce
                             }, localStorage.removeItem(e + "_EXTERNAL"), localStorage.setItem(e + "_EXTERNAL", JSON.stringify(o))) : localStorage.removeItem(e + "_EXTERNAL")
                         } catch (e) {}
                     })(r.chatflowid), S(r.chatflowConfig?.vars?.customerId ? (r.chatflowConfig?.vars).customerId.toString() + "+" + ze() : ze()), Ge([]);
-                    var e = [{
-                        message: r.lead && T.lead.name ? 'Hi ${t.lead.name}, how can i help you?':(r.welcomeMessage ?? qm),
-                        type: "apiMessage"
-                    }];
+                    var e = [];
+                    // Add personalized greeting if lead data exists
+                    if (t.lead && t.lead.name) {
+                        e.push({
+                            message: `Hi ${t.lead.name}, how can I help you?`,
+                            type: "apiMessage"
+                        });
+                    } else {
+                        e.push({
+                            message: r.welcomeMessage ?? qm,
+                            type: "apiMessage"
+                        });
+                    }
                     N()?.status && !ke(r.chatflowid)?.lead && e.push({
                         message: "",
                         type: "leadCaptureMessage"
