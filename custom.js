@@ -47553,8 +47553,8 @@ const am = ge('<span class="flex items-center gap-2">Saving...'),
                 name: r(),
                 email: t(),
                 phone: l()
-            })
-            }, (await (({
+            }):null;
+             (await (({
                 apiHost: e = "http://localhost:3000",
                 body: r,
                 onRequest: o
@@ -47582,7 +47582,7 @@ const am = ge('<span class="flex items-center gap-2">Saving...'),
                         type: "apiMessage"
                     }]);
                 }
-            }, 600)): (a = o.error.flatten(), m(a.fieldErrors)), d(!1)
+            }, 600)); (a = o.error.flatten(), m(a.fieldErrors)), d(!1)
         };
         {
             const d = dm(),
