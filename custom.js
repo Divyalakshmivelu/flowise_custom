@@ -47590,7 +47590,7 @@ const am = ge('<span class="flex items-center gap-2">Saving...'),
             }), m), m.style.setProperty("border-radius", "6px"), $e(m, (() => {
                 const d = T((() => !(!e.isLeadSaved && !ke(e.chatflowid)?.lead)));
                 return () => {
-                    return d() ? ((u = (x = sm()).firstChild).style.setProperty("white-space", "pre-line"), $e(u, (() => e.leadsConfig?.successMessage || "Thank you for submitting your contact information.")), x) : (c = (m = (x = (u = mm()).firstChild).nextSibling).firstChild, u.addEventListener("submit", g), x.style.setProperty("white-space", "pre-line"), $e(x, (() => e.leadsConfig?.title || "Let us know where we can reach you:")), $e(m, (() => {
+                    return d() ? ((u = (x = sm()).firstChild).style.setProperty("white-space", "pre-line"), $e(u, (() => e.leadsConfig?.successMessage || "Thank you ${r() || ''}! How can I help you?")), x) : (c = (m = (x = (u = mm()).firstChild).nextSibling).firstChild, u.addEventListener("submit", g), x.style.setProperty("white-space", "pre-line"), $e(x, (() => e.leadsConfig?.title || "Let us know where we can reach you:")), $e(m, (() => {
                         const t = T((() => !!e.leadsConfig?.name));
                         return () => t() && (() => {
                             const e = gm(),
@@ -48290,7 +48290,7 @@ const _m = ge('<div class="fixed inset-0 rounded-lg flex items-center justify-ce
                         } catch (e) {}
                     })(r.chatflowid), S(r.chatflowConfig?.vars?.customerId ? (r.chatflowConfig?.vars).customerId.toString() + "+" + ze() : ze()), Ge([]);
                     var e = [];
-                    // Add personalized greeting if lead data exists
+// Add personalized greeting if lead data exists
                     if (t.lead && t.lead.name) {
                         e.push({
                             message: `Hi ${t.lead.name}, how can I help you?`,
