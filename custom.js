@@ -47927,10 +47927,7 @@ const _m = ge('<div class="fixed inset-0 rounded-lg flex items-center justify-ce
             showTitle: !0
         }, e);
         let o, t;
-        const [a, l] = f(""), [i, n] = f(!1), [d, s] = f(!1), [m, g] = f({}), [c, x] = f([{
-            message: r.welcomeMessage ?? qm,
-            type: "apiMessage"
-        }], {
+        const [a, l] = f(""), [i, n] = f(!1), [d, s] = f(!1), [m, g] = f({}), [c, x] = f([{}], {
             equals: !1
         }), [u, p] = f(!1), [h, S] = f(""), [, v] = f(!1), [$, b] = f([], {
             equals: !1
