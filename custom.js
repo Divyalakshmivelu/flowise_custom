@@ -47553,6 +47553,7 @@ const am = ge('<span class="flex items-center gap-2">Saving...'),
                 name: r(),
                 email: t(),
                 phone: l()
+            })
             }, (await (({
                 apiHost: e = "http://localhost:3000",
                 body: r,
@@ -47571,15 +47572,17 @@ const am = ge('<span class="flex items-center gap-2">Saving...'),
                     email: t(),
                     phone: l()
                 }
-            }), e.setIsLeadSaved(!0), e.setLeadEmail(t()), setTimeout(() => {
+            }), e.setIsLeadSaved(!0), e.setLeadEmail(t()),
+            setTimeout(() => {
                 const name = r();
-                if (userName) {
-                    x([...c, {
-                        message: `Hi ${name}, how can I help you?`,
+                if (name && !sessionStorage.getItem('leadGreetingSent')) {
+                    sessionStorage.setItem('leadGreetingSent', 'true');
+                    x(prevMessages => [...prevMessages, {
+                        message: `Thank you ${name}! How can I help you?`,
                         type: "apiMessage"
                     }]);
                 }
-            }, 500))): (a = o.error.flatten(), m(a.fieldErrors)), d(!1)
+            }, 600)): (a = o.error.flatten(), m(a.fieldErrors)), d(!1)
         };
         {
             const d = dm(),
