@@ -47575,6 +47575,7 @@ const am = ge('<span class="flex items-center gap-2">Saving...'),
             }), e.setIsLeadSaved(!0), e.setLeadEmail(t()),
             setTimeout(() => {
                 const name = r();
+                sessionStorage.setItem('leadName', name);
                 if (name && !sessionStorage.getItem('leadGreetingSent')) {
                     sessionStorage.setItem('leadGreetingSent', 'true');
                     x(prevMessages => [...prevMessages, {
@@ -47601,8 +47602,7 @@ const am = ge('<span class="flex items-center gap-2">Saving...'),
             }), m), m.style.setProperty("border-radius", "6px"), $e(m, (() => {
                 const d = T((() => !(!e.isLeadSaved && !ke(e.chatflowid)?.lead)));
                 return () => {
-                    return d() ? ((u = (x = sm()).firstChild).style.setProperty("white-space", "pre-line"), $e(u, (() => e.leadsConfig?.successMessage || `Thank you ${r()}! How can I help you?`)), x) : (c = (m = (x = (u = mm()).firstChild).nextSibling).firstChild, u.addEventListener("submit", g), x.style.setProperty("white-space", "pre-line"), $e(x, (() => e.leadsConfig?.title || "Let us know where we can reach you:")), $e(m, (() => {
-                        const t = T((() => !!e.leadsConfig?.name));
+                    return d() ? ((u = (x = sm()).firstChild).style.setProperty("white-space", "pre-line"), $e(u, (() => e.leadsConfig?.successMessage || (() => {const leadName = sessionStorage.getItem('leadName');return `Thank you ${leadName || 'there'}! How can I help you?`;})())), x) : (c = (m = (x = (u = mm()).firstChild).nextSibling).firstChild, u.addEventListener("submit", g), x.style.setProperty("white-space", "pre-line"), $e(x, (() => e.leadsConfig?.title || "Let us know where we can reach you:")), $e(m, (() => {                        const t = T((() => !!e.leadsConfig?.name));
                         return () => t() && (() => {
                             const e = gm(),
                                 t = e.firstChild.firstChild;
