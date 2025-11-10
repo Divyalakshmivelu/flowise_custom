@@ -1075,7 +1075,7 @@ const Ye = ({
                 return {
                     "font-size": e.fontSize ? e.fontSize + "px" : "16px",
                     resize: "none",
-                    height: `${"" !== e.value ? t() : 56}px`
+                    height: `${""!==e.value?t():56}px`
                 }
             }
         }, o), !1, !1), i;
@@ -1634,7 +1634,7 @@ const zr = ge('<div class="w-full px-4 pt-4 pb-1 text-red-500 text-sm" data-test
                 const r = T((() => !!e.disabled));
                 return () => r() && lo()
             })(), null), M((e => {
-                var o = `inline-flex items-center h-12 max-w-max p-2 flex-none transition-opacity duration-300 ${r(), "opacity-100"} ${r() ? "bg-[rgba(0,0,0,0.3)]" : "bg-[transparent]"} border border-gray-300 rounded-md`,
+                var o = `inline-flex items-center h-12 max-w-max p-2 flex-none transition-opacity duration-300 ${r(),"opacity-100"} ${r()?"bg-[rgba(0,0,0,0.3)]":"bg-[transparent]"} border border-gray-300 rounded-md`,
                     t = "ml-1.5 'text-inherit transition-filter duration-300 " + (r() ? "blur-[2px]" : "blur-none");
                 return o !== e._v$ && ue(l, e._v$ = o), t !== e._v$2 && ue(i, e._v$2 = t), e
             }), {
@@ -1753,7 +1753,7 @@ class fo {
     code(e, r, o, t) {
         this.options.highlight && null != (a = this.options.highlight(e, r)) && a !== e && (o = !0, e = a);
         var a = o ? e : this.options.escape(e, !0);
-        return r ? `\n<pre><code class="${this.options.langPrefix + this.options.escape(r, !0)}">${a}\n</code></pre>\n` : `\n<pre><code>${a}\n</code></pre>\n`
+        return r ? `\n<pre><code class="${this.options.langPrefix+this.options.escape(r,!0)}">${a}\n</code></pre>\n` : `\n<pre><code>${a}\n</code></pre>\n`
     }
     blockquote(e) {
         return `<blockquote>\n${e}</blockquote>\n`
@@ -1762,13 +1762,13 @@ class fo {
         return e
     }
     heading(e, r, o) {
-        return `<h${r} id="${this.options.headerPrefix + o.toLowerCase().replace(/[^\w]+/g, "-")}">${e}</h${r}>\n`
+        return `<h${r} id="${this.options.headerPrefix+o.toLowerCase().replace(/[^\w]+/g,"-")}">${e}</h${r}>\n`
     }
     hr() {
         return this.options.xhtml ? "<hr/>\n" : "<hr>\n"
     }
     list(e, r) {
-        return `\n<${r = r ? "ol" : "ul"}>\n${e}</${r}>\n`
+        return `\n<${r=r?"ol":"ul"}>\n${e}</${r}>\n`
     }
     listitem(e) {
         return "<li>" + e + "</li>\n"
@@ -2274,7 +2274,7 @@ class _o {
                 type: Ze.text,
                 text: t[0]
             });
-            else if (a) throw new Error("Infinite loop on byte: " + a.charCodeAt(0) + `, near text '${a.slice(0, 30)}...'`)
+            else if (a) throw new Error("Infinite loop on byte: " + a.charCodeAt(0) + `, near text '${a.slice(0,30)}...'`)
         }
         return {
             tokens: this.tokens,
@@ -6273,7 +6273,7 @@ const Pt = ge('<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" vi
                     var r = Bt();
                     return $e(r, (() => e.children)), r
                 }
-            }), null), M((() => ue(i, `tree-item-content flex items-center py-2 px-1 rounded cursor-pointer ${r.isSelected(e.itemId) ? "selected" : ""} ` + (r.isHighlighted(e.itemId) ? "highlighted" : "")))), l
+            }), null), M((() => ue(i, `tree-item-content flex items-center py-2 px-1 rounded cursor-pointer ${r.isSelected(e.itemId)?"selected":""} ` + (r.isHighlighted(e.itemId) ? "highlighted" : "")))), l
         }
     },
     Vt = (ce(["click"]), ge('<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1">')),
@@ -7122,21 +7122,23 @@ const ia = () => Vt(),
                 const o = Va(),
                     t = o.firstChild,
                     a = t.firstChild;
-                a.firstChild, $e(o, (() =>  ""), t);
-                // return lnull
-                //     var a = e.footer?.textColor ?? e.poweredByTextColor ?? Ua,
-                //         l = e.badgeBackgroundColor ?? "#ffffff",
-                //         i = e.footer?.companyLink ?? "https://flowiseai.com",
-                //         n = e.footer?.textColor ?? e.poweredByTextColor ?? Ua;
-                // }), {
-                    // _v$: void 0,
-                    // _v$2: void 0,
-                    // _v$3: void 0,
-                    // _v$4: void 0
+                a.firstChild, $e(o, (() => e.footer?.text ?? ""), t);
+                return "function" == typeof r ? ve(r, t) : r = t, t.style.setProperty("font-weight", "bold"), $e(a, (() => e.footer?.company ?? "Flowise"), null), M((r => {
+                    var a = e.footer?.textColor ?? e.poweredByTextColor ?? Ua,
+                        l = e.badgeBackgroundColor ?? "#ffffff",
+                        i = e.footer?.companyLink ?? "https://flowiseai.com",
+                        n = e.footer?.textColor ?? e.poweredByTextColor ?? Ua;
+                    return a !== r._v$ && (null != (r._v$ = a) ? o.style.setProperty("color", a) : o.style.removeProperty("color")), l !== r._v$2 && (null != (r._v$2 = l) ? o.style.setProperty("background-color", l) : o.style.removeProperty("background-color")), i !== r._v$3 && xe(t, "href", r._v$3 = i), n !== r._v$4 && (null != (r._v$4 = n) ? t.style.setProperty("color", n) : t.style.removeProperty("color")), r
+                }), {
+                    _v$: void 0,
+                    _v$2: void 0,
+                    _v$3: void 0,
+                    _v$4: void 0
+                }), o
             }
         }), z(oe, {
             get when() {
-                return true
+                return !1 === e.footer?.showFooter
             },
             get children() {
                 const r = Ha();
@@ -44903,10 +44905,10 @@ const td = (e, r) => {
             "object" == typeof e.validation ? "includes" in e.validation ? (o = `Invalid input: must include "${e.validation.includes}"`, "number" == typeof e.validation.position && (o = o + " at one or more positions greater than or equal to " + e.validation.position)) : "startsWith" in e.validation ? o = `Invalid input: must start with "${e.validation.startsWith}"` : "endsWith" in e.validation ? o = `Invalid input: must end with "${e.validation.endsWith}"` : Dn.assertNever(e.validation) : o = "regex" !== e.validation ? "Invalid " + e.validation : "Invalid";
             break;
         case ed.too_small:
-            o = "array" === e.type ? `Array must contain ${e.exact ? "exactly" : e.inclusive ? "at least" : "more than"} ${e.minimum} element(s)` : "string" === e.type ? `String must contain ${e.exact ? "exactly" : e.inclusive ? "at least" : "over"} ${e.minimum} character(s)` : "number" === e.type ? "Number must be " + (e.exact ? "exactly equal to " : e.inclusive ? "greater than or equal to " : "greater than ") + e.minimum : "date" === e.type ? "Date must be " + (e.exact ? "exactly equal to " : e.inclusive ? "greater than or equal to " : "greater than ") + new Date(Number(e.minimum)) : "Invalid input";
+            o = "array" === e.type ? `Array must contain ${e.exact?"exactly":e.inclusive?"at least":"more than"} ${e.minimum} element(s)` : "string" === e.type ? `String must contain ${e.exact?"exactly":e.inclusive?"at least":"over"} ${e.minimum} character(s)` : "number" === e.type ? "Number must be " + (e.exact ? "exactly equal to " : e.inclusive ? "greater than or equal to " : "greater than ") + e.minimum : "date" === e.type ? "Date must be " + (e.exact ? "exactly equal to " : e.inclusive ? "greater than or equal to " : "greater than ") + new Date(Number(e.minimum)) : "Invalid input";
             break;
         case ed.too_big:
-            o = "array" === e.type ? `Array must contain ${e.exact ? "exactly" : e.inclusive ? "at most" : "less than"} ${e.maximum} element(s)` : "string" === e.type ? `String must contain ${e.exact ? "exactly" : e.inclusive ? "at most" : "under"} ${e.maximum} character(s)` : "number" === e.type ? `Number must be ${e.exact ? "exactly" : e.inclusive ? "less than or equal to" : "less than"} ` + e.maximum : "bigint" === e.type ? `BigInt must be ${e.exact ? "exactly" : e.inclusive ? "less than or equal to" : "less than"} ` + e.maximum : "date" === e.type ? `Date must be ${e.exact ? "exactly" : e.inclusive ? "smaller than or equal to" : "smaller than"} ` + new Date(Number(e.maximum)) : "Invalid input";
+            o = "array" === e.type ? `Array must contain ${e.exact?"exactly":e.inclusive?"at most":"less than"} ${e.maximum} element(s)` : "string" === e.type ? `String must contain ${e.exact?"exactly":e.inclusive?"at most":"under"} ${e.maximum} character(s)` : "number" === e.type ? `Number must be ${e.exact?"exactly":e.inclusive?"less than or equal to":"less than"} ` + e.maximum : "bigint" === e.type ? `BigInt must be ${e.exact?"exactly":e.inclusive?"less than or equal to":"less than"} ` + e.maximum : "date" === e.type ? `Date must be ${e.exact?"exactly":e.inclusive?"smaller than or equal to":"smaller than"} ` + new Date(Number(e.maximum)) : "Invalid input";
             break;
         case ed.custom:
             o = "Invalid input";
@@ -47553,8 +47555,7 @@ const am = ge('<span class="flex items-center gap-2">Saving...'),
                 name: r(),
                 email: t(),
                 phone: l()
-            }):null;
-             (await (({
+            }, (await (({
                 apiHost: e = "http://localhost:3000",
                 body: r,
                 onRequest: o
@@ -47572,18 +47573,7 @@ const am = ge('<span class="flex items-center gap-2">Saving...'),
                     email: t(),
                     phone: l()
                 }
-            }), e.setIsLeadSaved(!0), e.setLeadEmail(t()),
-            setTimeout(() => {
-                const name = r();
-                sessionStorage.setItem('leadName', name);
-                if (name && !sessionStorage.getItem('leadGreetingSent')) {
-                    sessionStorage.setItem('leadGreetingSent', 'true');
-                    x(prevMessages => [...prevMessages, {
-                        message: `Thank you ${name}! How can I help you?`,
-                        type: "apiMessage"
-                    }]);
-                }
-            }, 600)); (a = o.error.flatten(), m(a.fieldErrors)), d(!1)
+            }), e.setIsLeadSaved(!0), e.setLeadEmail(t()))) : (a = o.error.flatten(), m(a.fieldErrors)), d(!1)
         };
         {
             const d = dm(),
@@ -47602,7 +47592,8 @@ const am = ge('<span class="flex items-center gap-2">Saving...'),
             }), m), m.style.setProperty("border-radius", "6px"), $e(m, (() => {
                 const d = T((() => !(!e.isLeadSaved && !ke(e.chatflowid)?.lead)));
                 return () => {
-                    return d() ? ((u = (x = sm()).firstChild).style.setProperty("white-space", "pre-line"), $e(u, (() => e.leadsConfig?.successMessage || (() => {const leadName = sessionStorage.getItem('leadName');return `Thank you ${leadName || 'there'}! How can I help you?`;})())), x) : (c = (m = (x = (u = mm()).firstChild).nextSibling).firstChild, u.addEventListener("submit", g), x.style.setProperty("white-space", "pre-line"), $e(x, (() => e.leadsConfig?.title || "Let us know where we can reach you:")), $e(m, (() => {                        const t = T((() => !!e.leadsConfig?.name));
+                    return d() ? ((u = (x = sm()).firstChild).style.setProperty("white-space", "pre-line"), $e(u, (() => e.leadsConfig?.successMessage || "Thank you for submitting your contact information.")), x) : (c = (m = (x = (u = mm()).firstChild).nextSibling).firstChild, u.addEventListener("submit", g), x.style.setProperty("white-space", "pre-line"), $e(x, (() => e.leadsConfig?.title || "Let us know where we can reach you:")), $e(m, (() => {
+                        const t = T((() => !!e.leadsConfig?.name));
                         return () => t() && (() => {
                             const e = gm(),
                                 t = e.firstChild.firstChild;
@@ -47938,7 +47929,10 @@ const _m = ge('<div class="fixed inset-0 rounded-lg flex items-center justify-ce
             showTitle: !0
         }, e);
         let o, t;
-        const [a, l] = f(""), [i, n] = f(!1), [d, s] = f(!1), [m, g] = f({}), [c, x] = f([{}], {
+        const [a, l] = f(""), [i, n] = f(!1), [d, s] = f(!1), [m, g] = f({}), [c, x] = f([{
+            message: r.welcomeMessage ?? qm,
+            type: "apiMessage"
+        }], {
             equals: !1
         }), [u, p] = f(!1), [h, S] = f(""), [, v] = f(!1), [$, b] = f([], {
             equals: !1
@@ -48300,19 +48294,10 @@ const _m = ge('<div class="fixed inset-0 rounded-lg flex items-center justify-ce
                             }, localStorage.removeItem(e + "_EXTERNAL"), localStorage.setItem(e + "_EXTERNAL", JSON.stringify(o))) : localStorage.removeItem(e + "_EXTERNAL")
                         } catch (e) {}
                     })(r.chatflowid), S(r.chatflowConfig?.vars?.customerId ? (r.chatflowConfig?.vars).customerId.toString() + "+" + ze() : ze()), Ge([]);
-                    var e = [];
-// Add personalized greeting if lead data exists
-                    if (t.lead && t.lead.name) {
-                        e.push({
-                            message: `Hi ${t.lead.name}, how can I help you?`,
-                            type: "apiMessage"
-                        });
-                    } else {
-                        e.push({
-                            message: r.welcomeMessage ?? qm,
-                            type: "apiMessage"
-                        });
-                    }
+                    var e = [{
+                        message: r.welcomeMessage ?? qm,
+                        type: "apiMessage"
+                    }];
                     N()?.status && !ke(r.chatflowid)?.lead && e.push({
                         message: "",
                         type: "leadCaptureMessage"
@@ -49215,7 +49200,7 @@ const _m = ge('<div class="fixed inset-0 rounded-lg flex items-center justify-ce
                                         return l.$$click = () => Ar(t), $e(l, z(br, {
                                             color: "white"
                                         })), M((l => {
-                                            var i = `${o ? e.isFullPage ? o?.offsetWidth / 4 : o?.offsetWidth / 2 : "200"}px`,
+                                            var i = `${o?e.isFullPage?o?.offsetWidth/4:o?.offsetWidth/2:"200"}px`,
                                                 n = t.data;
                                             return i !== l._v$8 && (null != (l._v$8 = i) ? r.style.setProperty("width", i) : r.style.removeProperty("width")), n !== l._v$9 && xe(a, "src", l._v$9 = n), l
                                         }), {
@@ -49431,7 +49416,7 @@ const _m = ge('<div class="fixed inset-0 rounded-lg flex items-center justify-ce
         var r = e.tooltipMessage ?? "Hi There 👋!";
         const o = e.tooltipBackgroundColor ?? "black",
             t = e.tooltipTextColor ?? "white",
-            a = `${e.tooltipFontSize ?? 16}px`,
+            a = `${e.tooltipFontSize??16}px`,
             l = 20 < r.length ? r.split(" ").reduce(((e, r) => {
                 var o = e[e.length - 1];
                 return o && o.join(" ").length + r.length <= 20 ? o.push(r) : e.push([r]), e
@@ -49588,7 +49573,7 @@ const _m = ge('<div class="fixed inset-0 rounded-lg flex items-center justify-ce
                             return r.theme?.chatWindow?.errorMessage
                         },
                         get poweredByTextColor() {
-                            return null
+                            return r.theme?.chatWindow?.poweredByTextColor
                         },
                         get textInput() {
                             return r.theme?.chatWindow?.textInput
@@ -49741,7 +49726,7 @@ const _m = ge('<div class="fixed inset-0 rounded-lg flex items-center justify-ce
                         return e.theme?.chatWindow?.errorMessage
                     },
                     get poweredByTextColor() {
-                        return null
+                        return e.theme?.chatWindow?.poweredByTextColor
                     },
                     get textInput() {
                         return e.theme?.chatWindow?.textInput
