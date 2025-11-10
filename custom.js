@@ -47579,7 +47579,7 @@ const am = ge('<span class="flex items-center gap-2">Saving...'),
                 if (name && !sessionStorage.getItem('leadGreetingSent')) {
                     sessionStorage.setItem('leadGreetingSent', 'true');
                     x(prevMessages => [...prevMessages, {
-                        message: `Thank you ${name}!! How can I help you?`,
+                        message: `Thank you ${name}! How can I help you?`,
                         type: "apiMessage"
                     }]);
                 }
